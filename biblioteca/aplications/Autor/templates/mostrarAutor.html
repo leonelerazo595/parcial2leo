@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container col-md-10">
+        <h3 class="h3">MOSTRANDO LIBROS</h3>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">IDAutor</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Nacionalidad</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for v in listar %}
+
+                <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>{{v.IDAutor}} </td>
+                    <td>{{v.Nombre}} </td>
+                    <td>{{v.Nacionalidad}} </td>
+
+                </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
